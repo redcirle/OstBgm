@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<base href="./"/>
+<title>OstBgm</title>
+
+<!-- SEO Meta 开始 -->
+  <meta name="description" content="请保持心脏跳动，小丑猫等着与你共鸣。">
+  <meta name="keywords" content="OstBgm.com, OST, BGM, 小丑猫, 小丑猫游戏">
+  <link rel="canonical" href="https://OstBgm.com/">
+
+  <!-- 社交分享（Open Graph） -->
+  <meta property="og:title" content="Muse.Pink">
+  <meta property="og:description" content="请保持心脏跳动，小丑猫等着与你共鸣。">
+  <meta property="og:url" content="https://ostbgm.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://ostbgm.com/images/slide2.png">
+  <!-- SEO Meta 结束 -->
+
+<link href="style.css" rel="stylesheet"/>
+<link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+<div class="logo">
+<img alt="LOGO图" src="images/logo.png"/>
+</div>
+<div class="tagline" id="tagline"></div>
+<div class="swiper-container">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<img alt="Slide 1" src="images/slide1.png"/>
+<div class="card-content">
+<a class="card-button shop-to-glass" href="https://ostbgm.com/" onclick="return confirm('是否前往“小丑猫游戏”？');" target="_blank" data-confetti="true">OstBgm.com</a>
+</div>
+</div>  
+  <audio id="tagline-audio" src="audio/tagline.wav"></audio>
+<div class="swiper-slide">
+<img alt="Slide 2" src="images/slide2.png"/>
+<div class="card-content">
+<a class="card-button rose-to-glass" href="javascript:void(0);" data-confetti="true" data-action="obi-audio" data-audio="audio/obi.wav">欧比</a>
+</div>
+</div>
+<div class="swiper-slide">
+<img alt="Slide 3" src="images/slide3.png"/>
+<div class="card-content">
+<a class="card-button rose-to-glass" href="javascript:void(0);" data-confetti="true" data-action="wave">Join in</a>
+</div>
+</div>
+<div class="swiper-slide">
+<img alt="Slide 4" src="images/slide4.png"/>
+<div class="card-content">
+<a class="card-button redblue-glass" href="javascript:void(0);" data-action="laser">PRESS START</a>
+</div>
+</div>
+<div class="swiper-slide">
+<img alt="Slide 5" src="images/slide5.png"/>
+<div class="card-content">
+<a class="card-button wechat-to-glass" href="javascript:void(0);" data-action="liquidflash">Your move</a>
+</div>
+</div>
+<div class="swiper-slide">
+<img alt="Slide 6" src="images/slide6.png"/>
+<div class="card-content">
+<a class="card-button purple-to-glass" href="javascript:void(0);" data-action="pixelscan" data-scan-target=".swiper-container">Play Me</a>
+</div>
+</div>
+<div class="swiper-slide">
+<img alt="Slide 7" src="images/slide7.png"/>
+<div class="card-content">
+<a class="card-button blue-to-glass" href="javascript:void(0);" data-action="teleport" data-scan-target=".swiper-container">INSERT COIN</a>
+</div>
+</div>
+<div class="swiper-slide">
+<img alt="Slide 8" src="images/slide8.png"/>
+<div class="card-content">
+<a class="card-button blue-to-glass" href="javascript:void(0);" data-action="blackhole" data-scan-target=".swiper-container">CONTINUE</a>
+</div>
+</div>
+<div class="swiper-slide">
+<img alt="Slide 9" src="images/placeholder.png"/>
+<div class="card-content">
+<a class="card-button lavender-glass" href="javascript:void(0);">更多内容敬请期待</a>
+</div>
+</div>
+</div>
+<div class="swiper-pagination"></div>
+</div>
+<!-- 最新稳定版 Swiper 11，来自 jsDelivr CDN，兼容 loop + coverflow -->
+<link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+<!-- ✅ 模块化快捷指令色块结构：3块 + 预留扩展位 -->
+<div class="footer-button-group">
+
+  <!-- 色块 1：小红书主页 + 微信公众号 -->
+  <div class="footer-shortcut-card">
+    <a href="javascript:void(0);" onclick="confirmAndGoXHS()" class="footer-button red-button">小红书主页</a>
+    <a href="javascript:void(0);" onclick="toggleWeChatPublicQR()" class="footer-button glass">微信公众号</a>
+  </div>
+
+  <!-- 色块 2：联系我们 + 微博主页 -->
+<div class="footer-shortcut-card">
+  <a href="javascript:void(0);" onclick="confirmAndMail()" class="footer-button purple-striped-button">hello@joker.red</a>
+  <a href="javascript:void(0);" onclick="confirmAndGoWeibo()" class="footer-button weibo-button">微博主页</a>
+</div>
+
+  <!-- 色块 3：微信表情包 + 心脏跳动按钮 -->
+<div class="footer-shortcut-card">
+  <a href="javascript:void(0);" onclick="toggleQR()" class="footer-button zebra-blue-glass">
+  小丑猫的动物城
+</a>
+  <a href="javascript:void(0);" id="resonance-button" class="footer-button resonance-button">请保持心脏跳动</a>
+  <audio id="tagline-audio" src="audio/tagline.wav"></audio>
+</div>
+  <!-- ✅ 预留：后续色块（可复制此结构） -->
+  <!--
+  <div class="footer-shortcut-card">
+    <a href="#" class="footer-button">新功能按钮</a>
+    <a href="#" class="footer-button">另一个按钮</a>
+  </div>
+  -->
+
+</div>
+
+  <!-- 微信二维码弹窗 -->
+  <div id="qr-popup" class="qr-popup">
+    <div class="qr-box">
+      <img src="images/wechat_qr.png" alt="微信二维码" />
+      <button onclick="toggleQR()">关闭</button>
+    </div>
+  </div>
+
+  <!-- 微信公众号二维码弹窗 -->
+  <div id="wechat-public-qr-popup" class="qr-popup">
+  <div class="qr-box">
+    <img src="images/wechat_public_qr.png" alt="微信公众号二维码" />
+    <button onclick="toggleWeChatPublicQR()">关闭</button>
+  </div>
+</div>
+
+<!-- 卡片内按钮二维码弹窗（示例：动物城） -->
+<div id="qr-animalcity" class="qr-popup">
+  <div class="qr-box">
+    <img src="images/animalcity_public_qr.png" alt="小丑猫的动物城 微信二维码" />
+    <button onclick="closeQR('qr-animalcity')">关闭</button>
+  </div>
+</div>
+
+<!-- 卡片内按钮二维码弹窗（示例：西游） -->
+<div id="qr-xiyou" class="qr-popup">
+  <div class="qr-box">
+    <img src="images/xiyou_public_qr.png" alt="小丑猫的动物城 微信二维码" />
+    <button onclick="closeQR('qr-xiyou')">关闭</button>
+  </div>
+</div>
+
+<!-- 卡片内按钮二维码弹窗（示例：夏天） -->
+<div id="qr-summer" class="qr-popup">
+  <div class="qr-box">
+    <img src="images/summer_public_qr.png" alt="小丑猫的夏天 微信二维码" />
+    <button onclick="closeQR('qr-summer')">关闭</button>
+  </div>
+</div>
+
+<!-- 卡片内按钮二维码弹窗（示例：邀请） -->
+<div id="qr-invite" class="qr-popup">
+  <div class="qr-box">
+    <img src="images/invite_public_qr.png" alt="小丑猫的邀请 微信二维码" />
+    <button onclick="closeQR('qr-invite')">关闭</button>
+  </div>
+</div>
+
+<!-- 卡片内按钮二维码弹窗（示例:猜想） -->
+<div id="qr-conjecture" class="qr-popup">
+  <div class="qr-box">
+    <img src="images/conjecture_public_qr.png" alt="小丑猫的猜想 微信二维码" />
+    <button onclick="closeQR('qr-conjecture')">关闭</button>
+  </div>
+</div>
+
+ <div id="second-qr-popup" class="qr-popup">
+     <div class="qr-box">
+     <img src="images/emoji_pack2_qr.png" alt="第二套表情包二维码" />
+     <button onclick="toggleSecondQR()">关闭</button>
+  </div>
+</div>
+
+    <!-- 第三个表情包二维码弹窗 -->
+    <div id="third-qr-popup" class="qr-popup">
+      <div class="qr-box">
+      <img src="images/emoji_pack3_qr.png" alt="第三套表情包二维码" />
+      <button onclick="toggleThirdQR()">关闭</button>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <!-- ✅ 彩带粒子（confetti）库：用于成就/按钮点击庆祝效果 -->
+<script src="script.js" defer></script>
+</body>
+</html>
